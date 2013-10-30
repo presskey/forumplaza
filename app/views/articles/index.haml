@@ -1,0 +1,9 @@
+#content
+  %h1 Статьи
+  - @collection.each do |article|
+    %article.archive
+      = link_to image_tag(article.image?? article.image.url(:thumb) : 'article.jpg'), article_path(article)
+      .body
+        %h2= article.name
+        %p= truncate article.description
+    %br.clear

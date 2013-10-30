@@ -1,0 +1,44 @@
+#systems
+  #prom
+    %a{:href => industrial_systems_path}
+      .img
+      .system_label
+        %h2> Промышленные
+        климатические системы
+  #home
+    %a{:href => home_systems_path}
+      .img
+      .system_label
+        %h2> Бытовые
+        климатические системы
+  %br.clear/
+#service
+  .service_block
+    %a{:href => design_path}
+      #project.img
+      %h2 Проектирование
+      %p Проектные работы любой сложности, мы осуществляем анализ и экспертизу готовых проектных решений. Монтажная группа компании производит высококачественный монтаж климатического оборудования.
+  .service_block
+    %a{:href => dispatch_path}
+      #dispec.img
+      %h2 Диспетчеризация
+      %p Системы интегрированного управления позволяют эффективно управлять и контролировать работу систем кондиционирования. Доступ в интернет, различные режимы работы, индивидуальные настройки.
+  .service_block
+    %a{:href => service_path}
+      #serv.img
+      %h2 Сервис
+      %p Регулярное обслуживание  систем вентиляции, отопления и кондиционирования предупреждает серьезные поломки, влекущие за собой соответствующие внеплановые затраты.
+  %br.clear/
+#articles
+  - Article.visible.each do |article|
+    %article
+      .article-thumb
+        = link_to image_tag(article.image?? article.image.url(:thumb) : 'article.jpg'), article_path(article)
+        %span.article-type
+          %a{:href => articles_path}=t article.kind
+      %header
+        %h3= article.name
+  %br.clear/
+#equipment
+  %img#samsung{:alt => "Samsung", :src => "/assets/samsung.png"}/
+  %img#unico{:alt => "Unico", :src => "/assets/unico.png"}/

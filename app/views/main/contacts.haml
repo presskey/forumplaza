@@ -1,0 +1,63 @@
+#content
+  %h1 Контакты
+  #contacts
+    .foto
+      = image_tag "Contacts_grigoriy.jpg"
+      %br/
+      %b Гринь Григорий Михайлович
+      %br/
+      Коммерческий директор
+      %br/
+      Моб.: 067-788-48-28
+      %br/
+      E-mail: grigoriy@forumplaza.com.ua
+    .foto
+      = image_tag "Contacts_alexey.jpg"
+      %br/
+      %b Погребняк Алексей Владимирович
+      %br/
+      Руководитель отдела продаж
+      %br/
+      Моб.: 097-946-03-29
+      %br/
+      E-mail: alexey@forumplaza.com.ua
+    .foto
+      = image_tag "Contacts_nikolay.jpg"
+      %br/
+      %b Зброй Николай Андреевич
+      %br/
+      Главный инженер
+      %br/
+      Моб.: 050-962-33-33
+      %br/
+      E-mail: nikolay@forumplaza.com.ua
+    .foto
+      = image_tag "Contacts_uriy.jpg"
+      %br/
+      %b Рябов Юрий Евгеньевич
+      %br/
+      Бухгалтер
+      %br/
+      Моб.: 066-403-44-94
+      %br/
+      E-mail: yuri@forumplaza.com.ua
+    %br.clear/
+  #location
+    %h1 Офис
+    #address
+      Украина 08310 Киев
+      %br/
+      Большая Окружная дорога
+      %br/
+      Петропавловская Борщаговка,
+      %br/
+      ул. Петропавловская 14-Е
+    #contact_info
+      ТЦ «Диамант»
+      %br/
+      тел/факс: (044)450-05-10
+      %br/
+      E-mail: office@forumplaza.com.ua
+    #map
+
+- content_for :script, javascript_include_tag('https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&language=ru', 'map.js')

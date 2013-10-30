@@ -1,0 +1,62 @@
+!!!
+%html
+%head
+  %title Forum Plaza
+  = stylesheet_link_tag    "application", :media => "all"
+  = javascript_include_tag "application"
+  = yield :script
+  = csrf_meta_tags
+  %meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+%body
+  #container
+    #header
+      #logo= link_to image_tag('logo.png', alt: 'Forum Plaza'), root_path
+      #menu
+        = link_to 'О компании', about_path, class: 'item'
+        .dropdown
+          = link_to 'Услуги', '#', class: 'item'
+          .menu
+            .item= link_to 'Проектирование', design_path
+            .item= link_to 'Диспетчеризация', dispatch_path
+            .item= link_to 'Сервис', service_path
+        .dropdown
+          = link_to 'Системы', '#', class: 'item'
+          .menu
+            .item= link_to 'Промышленные', industrial_systems_path
+            .item= link_to 'Бытовые', home_systems_path
+        = link_to 'Референции', references_path, class: 'item'
+        = link_to 'Контакты', contacts_path, class: 'item'
+      %br.clear
+    #banner
+      = image_tag('banner.png') if show_banner?
+    = yield
+    #footer
+      #stamp_block.footer_block
+        = image_tag('stamp.png', alt: 'Forum Plaza')
+      .footer_block
+        %h4 Forum Plaza
+        .links_block
+          = link_to 'О компании', about_path
+          %br
+          = link_to 'Новости/Статьи', articles_path
+          %br
+          = link_to 'Проектирование', design_path
+          %br
+          = link_to 'Диспетчеризация', dispatch_path
+        .links_block
+          = link_to 'Сервис', service_path
+          %br
+          = link_to 'Промышленные системы', industrial_systems_path
+          = link_to 'Бытовые системы', home_systems_path
+          = link_to 'Референции', references_path
+      #marker_block= link_to image_tag('marker.png'), contacts_path
+      .footer_block
+        %h4 Офис
+        Украина 08130 Киев
+        %br
+        ул. Петропавловская, 14-Е
+        %br
+        ТЦ "Диамант" 3 этаж
+        %br
+        E-mail: office@forumplaza.com.ua
+      #phone_block.footer_block (044) 450-05-10

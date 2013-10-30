@@ -1,0 +1,6 @@
+#content
+  .badge= image_tag "butovue_sitemu_inactive.jpg"
+  %h1 Бытовые климатические системы
+  %ul
+    - @collection.each do |system|
+      %li= link_to system.name, [system]

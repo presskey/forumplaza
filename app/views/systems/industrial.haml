@@ -1,0 +1,6 @@
+#content
+  .badge= image_tag "Prom_sistemu_inactive.jpg"
+  %h1 Промышленные климатические системы
+  %ul
+    - @collection.each do |system|
+      %li= link_to system.name, [system]
