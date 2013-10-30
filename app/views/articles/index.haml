@@ -5,5 +5,5 @@
       = link_to image_tag(article.image?? article.image.url(:thumb) : 'article.jpg'), article_path(article)
       .body
         %h2= article.name
-        %p= truncate article.description
+        %p=raw truncate article.description
     %br.clear
