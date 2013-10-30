@@ -138,8 +138,11 @@ a {text-decoration: none; color: black;}
 }
 #content h1:before, #content h1:after { content: " - "; }
 #content p {
-  padding: 0 40px 80px 40px;
+  padding: 0 40px 20px 40px;
   text-align: justify;
+}
+#content p:last-child {
+  padding-bottom: 80px;
 }
 .foto { float: left; width: 255px; text-align: center; padding: 20px 0; font-size: 12px;}
 #map { width: 944px; height: 400px; margin: 0 40px;}
