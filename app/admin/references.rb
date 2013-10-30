@@ -4,7 +4,7 @@ ActiveAdmin.register Reference do
 
   index do
     column :name
-    column :description
+    #column :description
     default_actions 
   end
   form decorate:false do |f|                         

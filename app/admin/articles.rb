@@ -10,7 +10,7 @@ ActiveAdmin.register Article do
 
   index do
     column :name
-    column :description
+    #column :description
     column :kind do |article| 
       Article::KIND_LABELS[article.kind.to_sym]
     end

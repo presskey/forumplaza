@@ -8,7 +8,7 @@ ActiveAdmin.register System do
 
   index do
     column :name
-    column :description
+    #column :description
     column :kind do |system| 
       System::KIND_LABELS[system.kind.to_sym]
     end
