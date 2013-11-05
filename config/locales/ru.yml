@@ -258,6 +258,9 @@ ru:
     errors:
       <<: *errors
     models:
+      slide: 
+        one: Слайд
+        other: Слайды
       article: 
         one: Статья
         other: Статьи
@@ -276,7 +279,20 @@ ru:
       admin_user:
         one: Администратор
         other: Администраторы
+      contact:
+        one: Контакт
+        other: Контакты
+      company:
+        one: Компания
+        other: Компании
     attributes:
+      contact:
+        name: Имя
+        post: Должность
+        phone: Телефон
+        email: E-mail
+        photo: Фото
+        position: Позиция
       article:
         name: Заголовок
         description: Содержимое
@@ -285,6 +301,7 @@ ru:
         created_at: Дата создания
         updated_at: Дата изменения
         image: Картинка
+        position: Позиция
       text:
         name: Идентификатор
         description: Содержимое
@@ -296,12 +313,14 @@ ru:
         kind: Тип
         created_at: Дата создания
         updated_at: Дата изменения
+        company: Компания
       reference:
         name: Название
         description: Описание
         created_at: Дата создания
         updated_at: Дата изменения
         image: Картинка
+        position: Позиция
       admin_user:
         current_sign_in_at: Время текущего входа 
         last_sign_in_at: Время последнего входа
@@ -310,3 +329,7 @@ ru:
         updated_at: Дата изменения
         password: Пароль
         password_confirmation: Подтверждение пароля
+      company:
+        name: Название
+        description: Описание
+        logo: Логотип

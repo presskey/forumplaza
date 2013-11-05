@@ -1,9 +1,15 @@
 #content
-  %h1 Статьи
-  - @collection.each do |article|
-    %article.archive
-      = link_to image_tag(article.image?? article.image.url(:thumb) : 'article.jpg'), article_path(article)
-      .body
-        %h2= article.name
-        %p= truncate article.description
+  %h1 Статьи / Новости
+  #articles
+    - @collection.each do |article|
+      %article
+        .article-thumb
+          = link_to image_tag(article.image?? article.image.url(:thumb) : 'article.jpg'), article_path(article)
+          %span.article-type
+            %a{:href => articles_path}=t article.kind
+        %header
+          %h3= article.name
     %br.clear
+
+- content_for :title, "Статьи / Новости"
+- content_for :description, "Статьи и новости компании Forum Plaza"

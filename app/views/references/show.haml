@@ -1,3 +1,6 @@
 #content
   %h1= @reference.name
   =raw @reference.description
+
+- content_for :title, "Референция: #{@reference.name}"
+- content_for :description, "Референция: #{@reference.name}"

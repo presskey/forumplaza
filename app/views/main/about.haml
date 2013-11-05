@@ -1,3 +1,6 @@
 #content
   %h1 О компании
-  %p= ::Text.content('about')
+  %p=raw ::Text.content('about')
+
+- content_for :title, "О компании"
+- content_for :description, "Форум-Плаза – компания с многолетним опытом внедрения климатических систем на рынке Украины."

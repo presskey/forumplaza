@@ -6,3 +6,6 @@
         - if item.image?
           = link_to image_tag(item.image.url(:pano)), reference_path(item)
         %span.article-type= link_to(item.name, [item])
+
+- content_for :title, "Референции"
+- content_for :description, "Референции"

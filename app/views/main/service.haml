@@ -1,4 +1,7 @@
 #content
   .badge= image_tag "service_inactive.jpg"
   %h1 Сервис
-  %p= ::Text.content('service')
+  %p=raw ::Text.content('service')
+
+- content_for :title, "Сервис"
+- content_for :description, "Регулярное обслуживание  систем вентиляции, отопления и кондицио­нирования предупреждает серьез­ные поломки, влекущие за собой соответствующие внеплановые за­траты."

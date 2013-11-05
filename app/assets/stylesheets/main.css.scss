@@ -5,7 +5,7 @@ body {background-color: #ebebeb;}
 #container {width: 1024px; margin: 0 auto; background-color: white; font-family: 'Open Sans', sans-serif; font-weight: 300;}
 #logo {float: left; padding: 20px;}
 #menu {float: right; padding: 24px 20px;}
-#menu a {margin-left: 20px;}
+#menu a {margin: 0 10px;}
 #header { border-bottom: 1px solid #cdcdcd; }
 #footer {background-color: #232323; height: 150px; color: white; padding-left: 20px; font-size: 12px;}
 .links_block {float: left; width: 150px;}
@@ -14,7 +14,7 @@ body {background-color: #ebebeb;}
 #stamp_block {float: left;}
 a {text-decoration: none; color: black;}
 #footer a {color: white;}
-#marker_block {float: left; margin: 55px 0;}
+#marker_block {float: left; margin: 55px 0 0 0;}
 #phone_block {padding: 0; font-weight: 600; font-size: 18px; margin: 60px 60px;}
 #equipment {height: 70px; padding: 0 250px; margin-top: 10px;}
 #samsung {float: left; padding-top: 10px;}
@@ -40,7 +40,7 @@ a {text-decoration: none; color: black;}
 .service_block #serv.img:hover { background: url('service_active.jpg');}
 
 .clear {clear: both;}
-#systems {padding: 20px 120px 40px 120px;}
+#systems {padding: 20px 100px 40px 180px;}
 #systems h2 {font-weight: 300;}
 #systems .img, #systems .system_label {float: left;}
 #systems .img {margin-right: 15px;}
@@ -73,7 +73,7 @@ a {text-decoration: none; color: black;}
   top: 8px;
   background: #3a3a3a;
   padding: 2px 8px;
-  font-size: 8px;
+  font-size: 10px;
   text-transform: uppercase;
   line-height: 20px;
 }
@@ -94,15 +94,16 @@ a {text-decoration: none; color: black;}
 .dropdown .menu { 
   position: absolute; 
   background-color: white; 
-  margin-left: -25px;
+  margin-left: -38px;
   -webkit-box-shadow: 0px 1px 1px 1px #ddd;
   -moz-box-shadow: 0px 1px 1px 1px #ddd;
   box-shadow: 0px 1px 1px 1px #ddd;
   display: none;
+  z-index: 10;
 }
 .dropdown > .item { line-height: 40px; }
 .dropdown .menu .item { 
-  padding: 0.85em 20px 0.85em 0 !important; 
+  padding: 0.85em 10px 0.85em 10px !important; 
   border-top: 1px solid rgba(0, 0, 0, 0.05); 
   font-size: 0.875rem; 
   cursor: pointer;
@@ -155,3 +156,4 @@ article.archive h2 {margin: 0 0 0 40px; font-size: 18px;}
 article.archive img, article.archive .body { float: left;}
 article.archive img { margin: 0 0 20px 40px;}
 article.archive .body { width: 760px; }
+.company { margin: 0 40px; }

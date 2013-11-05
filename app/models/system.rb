@@ -1,6 +1,8 @@
 # encoding: utf-8
 class System < ActiveRecord::Base
-  attr_accessible :name, :description, :kind
+  attr_accessible :name, :description, :kind, :company_id
+
+  belongs_to :company
 
   KINDS = %w/industrial home/
   KIND_LABELS = {

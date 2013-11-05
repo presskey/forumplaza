@@ -1,4 +1,7 @@
 #content
   .badge= image_tag "dispetc_inactive.jpg"
   %h1 Диспетчеризация
-  %p= ::Text.content('dispatch')
+  %p=raw ::Text.content('dispatch')
+
+- content_for :title, "Диспетчеризация"
+- content_for :description, "Системы интегрированного управле­ния позволяют эффективно управлять и контролировать работу систем кондиционирования. Доступ в интер­нет, различные режимы работы, индивидуальные настройки."

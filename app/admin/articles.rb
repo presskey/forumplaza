@@ -17,6 +17,7 @@ ActiveAdmin.register Article do
     column :visible do |article| 
       article.visible? ? status_tag('Да', :green) : status_tag('Нет')
     end
+    column :position
     default_actions 
   end
 
@@ -28,6 +29,7 @@ ActiveAdmin.register Article do
       f.input :image, as: 'file', :hint => f.object.article.image? ? f.template.image_tag(f.object.article.image.url(:thumb)) : nil    
       f.input :image_cache, :as => :hidden  
       f.input :visible
+      f.input :position
     end                               
     f.actions                         
   end 

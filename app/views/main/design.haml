@@ -1,4 +1,7 @@
 #content
   .badge= image_tag "project_inactive.jpg"
   %h1 Проектирование
-  %p= ::Text.content('design')
+  %p=raw ::Text.content('design')
+
+- content_for :title, "Проектирование"
+- content_for :description, "Проектные работы любой сложности, мы осуществляем анализ и экспер­тизу готовых проектных решений. Монтажная группа компании произ­водит высококачественный монтаж климатического оборудования."

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131029132858) do
+ActiveRecord::Schema.define(:version => 20131105183208) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -54,6 +54,26 @@ ActiveRecord::Schema.define(:version => 20131029132858) do
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
     t.string   "image"
+    t.float    "position"
+  end
+
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "logo"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "name"
+    t.string   "post"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "photo"
+    t.float    "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "references", :force => true do |t|
@@ -62,6 +82,13 @@ ActiveRecord::Schema.define(:version => 20131029132858) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "image"
+    t.float    "position"
+  end
+
+  create_table "slides", :force => true do |t|
+    t.string   "image"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "systems", :force => true do |t|
@@ -70,7 +97,10 @@ ActiveRecord::Schema.define(:version => 20131029132858) do
     t.string   "kind"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "company_id"
   end
+
+  add_index "systems", ["company_id"], :name => "index_systems_on_company_id"
 
   create_table "texts", :force => true do |t|
     t.string   "name"

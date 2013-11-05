@@ -1,6 +1,7 @@
 #content
   .badge= image_tag "butovue_sitemu_inactive.jpg"
   %h1 Бытовые климатические системы
-  %ul
-    - @collection.each do |system|
-      %li= link_to system.name, [system]
+  = render partial: 'list', locals: { collection: @collection, companies: @companies }
+
+- content_for :title, "Бытовые климатические системы"
+- content_for :description, "Бытовые климатические системы"

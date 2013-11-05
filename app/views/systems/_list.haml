@@ -1,0 +1,9 @@
+- companies.each do |company|
+  .company
+    = image_tag(company.logo.url)
+    %p 
+      %b= company.name
+      – #{company.description}
+    %ul
+      - collection[company.id].each do |system|
+        %li= link_to system.name, [system]

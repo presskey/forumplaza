@@ -15,3 +15,4 @@ CKEDITOR.config.toolbar = [
   { name: 'styles', items : [ 'Styles','Format','Font','FontSize' ] },
   { name: 'colors', items : [ 'TextColor','BGColor' ] }
 ];
+CKEDITOR.config.autoParagraph = false;
