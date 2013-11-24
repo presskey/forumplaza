@@ -1,6 +1,9 @@
 #content
-  %h1= @system.name
+  %h1= @system.self_and_ancestors.map(&:name).join(' / ')
   %p= @system.description
+  %ul
+    - @system.children.each do |system|
+      %li= link_to system.name, [system]
 
 - content_for :title, "Климатическая система: #{@system.name}"
 - content_for :description, "Климатическая система: #{@system.name}"

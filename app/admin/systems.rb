@@ -8,6 +8,9 @@ ActiveAdmin.register System do
 
   index do
     column :name
+    column :parent_id do |article|
+      article.parent.try(:name)
+    end
     #column :description
     column :kind do |system| 
       System::KIND_LABELS[system.kind.to_sym]
@@ -19,7 +22,8 @@ ActiveAdmin.register System do
   form do |f|                         
     f.inputs do       
       f.input :company, collection: Company.all, include_blank: false 
-      f.input :name                  
+      f.input :name
+      f.input :parent_id, as: :select, collection: nested_set_options(System, @system) {|i| "#{'-' * i.level} #{i.name}" }                    
       f.input :description               
       f.input :kind, collection: System::KINDS.map {|k| [System::KIND_LABELS[k.to_sym], k]}, include_blank: false 
     end                               

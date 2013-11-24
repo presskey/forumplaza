@@ -2,7 +2,7 @@ class SystemsController < ApplicationController
   def industrial
     @companies = []
     @collection = {}
-    System.industrial.includes(:company).each do |s|
+    System.industrial.roots.includes(:company).each do |s|
       @companies << s.company
       @collection[s.company_id] ||= []
       @collection[s.company_id] << s
@@ -13,7 +13,7 @@ class SystemsController < ApplicationController
   def home
     @companies = []
     @collection = {}
-    System.home.includes(:company).each do |s|
+    System.home.roots.includes(:company).each do |s|
       @companies << s.company
       @collection[s.company_id] ||= []
       @collection[s.company_id] << s

@@ -314,6 +314,7 @@ ru:
         created_at: Дата создания
         updated_at: Дата изменения
         company: Компания
+        parent_id: Раздел
       reference:
         name: Название
         description: Описание
