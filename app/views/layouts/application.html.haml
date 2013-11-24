@@ -32,7 +32,7 @@
         - if show_banner?
           #slider
             - Slide.all.each do |slide|
-              = image_tag(slide.image.url)
+              = image_tag(slide.image.url, style: 'visibility: hidden;')
       = yield
       #footer
         #stamp_block.footer_block
