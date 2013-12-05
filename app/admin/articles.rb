@@ -24,7 +24,7 @@ ActiveAdmin.register Article do
   form decorate: false do |f|                         
     f.inputs do       
       f.input :name                  
-      f.input :description, as: :ckeditor#, input_html: { ckeditor: {extraPlugins: 'uploadcare'} }              
+      f.input :description, as: :rich#, input_html: { ckeditor: {extraPlugins: 'uploadcare'} }              
       f.input :kind, collection: Article::KINDS.map {|k| [Article::KIND_LABELS[k.to_sym], k]}, include_blank: false
       f.input :image, as: 'file', :hint => f.object.article.image? ? f.template.image_tag(f.object.article.image.url(:thumb)) : nil    
       f.input :image_cache, :as => :hidden  

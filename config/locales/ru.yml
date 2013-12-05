@@ -1,4 +1,5 @@
 ru:
+  picker_browse: Выбор файла
   article: Статья
   news: Новость
   date:
@@ -334,3 +335,4 @@ ru:
         name: Название
         description: Описание
         logo: Логотип
+        position: Позиция

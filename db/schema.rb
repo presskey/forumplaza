@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131124182815) do
+ActiveRecord::Schema.define(:version => 20131205220110) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20131124182815) do
     t.string   "logo"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.float    "position"
   end
 
   create_table "contacts", :force => true do |t|
@@ -83,6 +84,19 @@ ActiveRecord::Schema.define(:version => 20131124182815) do
     t.datetime "updated_at",  :null => false
     t.string   "image"
     t.float    "position"
+  end
+
+  create_table "rich_rich_files", :force => true do |t|
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
+    t.string   "rich_file_file_name"
+    t.string   "rich_file_content_type"
+    t.integer  "rich_file_file_size"
+    t.datetime "rich_file_updated_at"
+    t.string   "owner_type"
+    t.integer  "owner_id"
+    t.text     "uri_cache"
+    t.string   "simplified_type",        :default => "file"
   end
 
   create_table "slides", :force => true do |t|

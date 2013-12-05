@@ -11,7 +11,7 @@ ActiveAdmin.register Text do
   form do |f|                         
     f.inputs do       
       f.input :name                  
-      f.input :description, as: :ckeditor    
+      f.input :description, as: :rich    
     end                               
     f.actions                         
   end 

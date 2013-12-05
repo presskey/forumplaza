@@ -11,7 +11,7 @@ ActiveAdmin.register Reference do
   form decorate:false do |f|                         
     f.inputs do       
       f.input :name                  
-      f.input :description, as: :ckeditor
+      f.input :description, as: :rich
       f.input :image, as: 'file', :hint => reference.image? ? f.template.image_tag(reference.image.url(:pano)) : nil      
       f.input :image_cache, :as => :hidden     
       f.input :position 

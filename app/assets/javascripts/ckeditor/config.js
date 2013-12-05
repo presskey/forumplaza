@@ -1,6 +1,6 @@
 UPLOADCARE_PUBLIC_KEY = "demopublickey"; //set publick key for Uploadcare
 UPLOADCARE_LOCALE = 'ru'; //set locale if you wish
-CKEDITOR.config.extraPlugins = 'uploadcare';
+CKEDITOR.config.extraPlugins = 'uploadcare,slideshow';
 CKEDITOR.config.language = 'ru';
 CKEDITOR.config.toolbar = [
   { name: 'document', items : [ 'Source','-','ShowBlocks','-','Save','NewPage','DocProps','Preview','Print','-','Templates' ] },
@@ -10,7 +10,7 @@ CKEDITOR.config.toolbar = [
   { name: 'links', items : [ 'Link','Unlink','Anchor' ] },
   { name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv',
   '-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiLtr','BidiRtl' ] },
-  { name: 'insert', items : [ 'Flash','Table','HorizontalRule','SpecialChar','PageBreak','Iframe','Uploadcare' ] },
+  { name: 'insert', items : [ 'Flash','Table','HorizontalRule','SpecialChar','PageBreak','Iframe','Slideshow','Uploadcare'] },
   '/',
   { name: 'styles', items : [ 'Styles','Format','Font','FontSize' ] },
   { name: 'colors', items : [ 'TextColor','BGColor' ] }
