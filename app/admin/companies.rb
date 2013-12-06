@@ -5,7 +5,7 @@ ActiveAdmin.register Company do
   index do
     column :name
     column :description
-    #column :position
+    column :position
     default_actions 
   end
 
@@ -15,7 +15,7 @@ ActiveAdmin.register Company do
       f.input :description             
       f.input :logo, as: 'file', :hint => f.object.company.logo? ? f.template.image_tag(f.object.company.logo.url) : nil    
       f.input :logo_cache, :as => :hidden
-      #f.input :position
+      f.input :position
     end                               
     f.actions                         
   end 

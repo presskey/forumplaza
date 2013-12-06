@@ -7,7 +7,7 @@ class SystemsController < ApplicationController
       @collection[s.company_id] ||= []
       @collection[s.company_id] << s
     end
-    @companies.uniq!
+    @companies.sort_by!(&:position).reverse!.uniq!
   end
 
   def home
@@ -18,7 +18,7 @@ class SystemsController < ApplicationController
       @collection[s.company_id] ||= []
       @collection[s.company_id] << s
     end
-    @companies.uniq!
+    @companies.sort_by!(&:position).reverse!.uniq!
   end
 
   def show
