@@ -1,6 +1,6 @@
 #content
   %h1= @system.self_and_ancestors.map(&:name).join(' / ')
-  %p= @system.description
+  %p= @system.description.html_safe
   %ul
     - @system.children.each do |system|
       %li= link_to system.name, [system]

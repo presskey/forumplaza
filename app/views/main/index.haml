@@ -1,3 +1,10 @@
+#equipment
+  %h3 Эксклюзивный партнер
+  %a{:href => industrial_systems_path}
+    %img#samsung{:alt => "Samsung", :src => "/assets/samsung.png"}/
+  %a{:href => home_systems_path}
+    %img#unico{:alt => "Unico", :src => "/assets/unico.png"}/
+  %br.clear/
 #systems
   #prom
     %a{:href => industrial_systems_path}
@@ -39,8 +46,5 @@
       %header
         %h3= article.name
   %br.clear/
-#equipment
-  %img#samsung{:alt => "Samsung", :src => "/assets/samsung.png"}/
-  %img#unico{:alt => "Unico", :src => "/assets/unico.png"}/
 
 - content_for :title, "Промышленные и бытовые климатические ситемы. Проектирование, диспетчеризация, сервис"
