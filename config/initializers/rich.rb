@@ -3,6 +3,14 @@ require "rich"
 if Object.const_defined?("Rich")
   Rich.setup do |config|    
     
+    config.editor[:toolbar] = [
+        ['Font','FontSize','TextColor','BGColor'],
+        ['Bold', 'Italic', 'Underline','Strike','Subscript','Superscript','-','RemoveFormat'],
+        ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+        ['NumberedList', 'BulletedList', 'Blockquote', '-', 'richImage', 'richFile','MediaEmbed', '-', 'Link', 'Unlink', '-', 'Table','HorizontalRule','SpecialChar'],
+        ['Source', 'ShowBlocks']
+    ]
+
     # == CKEditor configuration
     # 
     # Rich ships with what I hope are sensible defaults. 
